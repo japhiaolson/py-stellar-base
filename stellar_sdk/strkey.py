@@ -4,16 +4,15 @@ import struct
 from typing import Union
 from xdrlib import Packer, Unpacker
 
-from .vendor.crc16 import crc16xmodem
-
-from .exceptions import (
-    Ed25519SecretSeedInvalidError,
-    Ed25519PublicKeyInvalidError,
-    ValueError,
-    TypeError,
-    MuxedEd25519AccountInvalidError,
-)
 from . import xdr as stellar_xdr
+from .exceptions import (
+    Ed25519PublicKeyInvalidError,
+    Ed25519SecretSeedInvalidError,
+    MuxedEd25519AccountInvalidError,
+    TypeError,
+    ValueError,
+)
+from .vendor.crc16 import crc16xmodem
 
 __all__ = ["StrKey"]
 
