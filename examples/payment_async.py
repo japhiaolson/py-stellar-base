@@ -14,12 +14,13 @@ See: https://developers.stellar.org/docs/start/list-of-operations/#payment
 """
 import asyncio
 
-from stellar_sdk import AiohttpClient, Keypair, Network, Server, TransactionBuilder
 import requests
+
+from stellar_sdk import AiohttpClient, Keypair, Network, Server, TransactionBuilder
+
 
 def create_account():
     """To make this script work, create an account on the testnet."""
-
 
     keypair = Keypair.random()
     url = "https://friendbot.stellar.org"
