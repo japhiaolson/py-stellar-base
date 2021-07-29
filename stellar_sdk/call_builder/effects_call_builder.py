@@ -68,3 +68,12 @@ class EffectsCallBuilder(BaseCallBuilder):
         """
         self.endpoint = f"operations/{operation_id}/effects"
         return self
+    
+    def join(self, join: str) -> "EffectsCallBuilder":
+        """join represents `join` param in queries, currently only supports `transactions`
+        :param join: join represents `join` param in queries, currently only supports `transactions`
+        :return: current EffectsCallBuilder instance
+        """
+        self._add_query_param("join", join)
+        return self
+
